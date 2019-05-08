@@ -1,0 +1,90 @@
+/*all*/
+
+  html, body {background:#ffffff; height: 99%; width: 99%;
+  }
+  a{text-decoration:none; color:black; color:inherit;}
+  h1{width: 500px; font-style: helvetica;
+     color:orange;font-size: 30px;}
+  li,ul{list-style:none;}
+  ul{padding-left:0px;}
+
+.header{align: center; margin: 10px;
+padding-top:50px ;}
+.header h1{display: none;}
+  .logo1 img{ width: 200px; position: fixed; display:inline-block;}
+  .logo1 {width: 99.9999%; height: 200px;}
+
+.shadow{
+  box-shadow:4px 4px 6px #b2b2b2;
+}
+  .tshadow{text-shadow: 1px 1px 2px #b2b2b2;}
+
+      /*가생이 그룹*/
+    .line{box-shadow:1px 1px 3px #b2b2b2;
+        border: 0.7px solid #aaa333; height: 47%;
+        position:fixed; }
+    .lineleft{
+          top: 15%; left: 20px;
+        }
+    .lineright{
+        bottom: 15%; right: 20px;
+      }
+    .t1,.t2{font-family: helvetica; font-size: 12px;
+          position:fixed;color:#aaa333;}
+    .t1{width:auto; height:auto;
+                -webkit-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                left:4px; top:55px;
+                  }
+    .t2{width:50px; height:50px;
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                right:13px; bottom:30px;
+                 }
+      .cute {border:solid none; border-radius:50%;
+        background:pink;width:10px; height:10px;
+        margin:10px; position:absolute;}
+      .cute:nth-child(2){background:green;
+      bottom:200px; right: 7px; position:absolute;}
+        /*가생이 그룹*/
+
+.page {
+     width:60%; height:auto;
+     position: fixed;
+     display:block;}
+    .list{position:relative; display:block;
+      font-family: helvetica;
+      font-size: 40px; font-style:italic;
+      padding: 20px;}
+    .category {width:auto;
+      }
+      .nav{width:auto;}
+      .gnb li {margin: 0 auto; width:50px;}
+      .nav .gnb .sub {display:none;}
+      .nav .gnb li:hover .sub {
+        padding: 30px;width:100px;
+        display:block; font-size: 15px;
+        margin: 10px;
+        background: #ff050050;
+      }
+
+
+  #follow{position:fixed;  float:left;
+    left:15px; bottom:15px;
+    }
+
+#background {position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#background img{
+  padding:0;
+  width: 100%;
+}
+
+  @media screen and (max-width: 768px){
+    .logo1 img{width:150px;}
+    #background {
+      display: block;
+    }
+  }
