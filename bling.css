@@ -3,46 +3,51 @@
  body {background:#ffffff; width:100%; height: 100%;
   }
   a{text-decoration:none; color:black;}
-  h1{}
-  li,ul{list-style:none;}
-  ul{}
+  h1{font-family:Arial Black;
+     font-size: 50px;}
+  li,ul{list-style:none; text-align: center;}
+  ul{padding: inherit;}
   p{
     font-family:SpoqaHanSans;
     color: #000000;
     font-size: 12px;
     padding: 10%;
    }
-.header{ position:fixed; display: block;
-  width: 500px; height: 200px;
+  .smaltext{font-size: 20px; font-family:SpoqaHanSans;}
+.header{
+  position:fixed;
+  z-index: 3;
+  top: 10%;
+  width: 100%; height: 100px;
 }
 .header h1{
    position:fixed;
-   margin-left: 0; margin-right: 0;
-   top:20px; left:45%;
-   padding:50px;
-
 
     }
-  .logo1 img{ width: 200px; position: fixed; display:none;}
-  .logo1 {width: 99.9999%; height: 200px;}
-  .logo2 {display: block;}
+  .logo1 img{
+    width: 200px;
+    position: fixed; display:none;}
+  .logo2{width:300px;height: 50px;
+    margin: 0 auto;}
 
 .shadow{
   box-shadow:4px 4px 6px #b2b2b2;
-}
+  }
   .tshadow{
     text-shadow: 1px 1px 2px #b2b2b2;
   }
 
       /*가생이 그룹*/
-    .line{box-shadow:1px 1px 3px #b2b2b2;
+  .line{box-shadow:1px 1px 3px #b2b2b2;
         border: 0.7px solid #000000; height: 47%;
         position:fixed; }
     .lineleft{
           top: 15%; left: 20px;
+          float: left;
         }
     .lineright{
         bottom: 15%; right: 20px;
+        float: right;
       }
     .t1,.t2{font-family: helvetica; font-size: 12px;
           position:fixed;color:#000000;padding: 0;}
@@ -64,54 +69,60 @@
         /*가생이 그룹*/
 
 .page {border: solid 0;
-     width:500px; height:1000;
+     width:900px; height:1200;
      position: fixed;
      top:200px;}
-    .list{position:relative; display:block;
-      font-family: helvetica;
-      font-size: 40px; font-style:italic;
-      padding:20px;}
 .page2{
         width:70%; height: 1000px;
         background:#cbcbcb;
         overflow: scroll;
-        z-index: 1;
+        z-index: 2;
         margin: 0 auto;
+        position:relative;
+        top: 140px;
         }
-.page2 img{width: 100%; padding-top:50px;}
+.page2 img{width: 100%; padding-top:50px;
+        }
 
 #category {
       }
-      .nav{text-align:center;}
-      .gnb{margin: 0 auto;left:0 auto; right: 0 auto;}
-      .gnb li {margin: 0 auto; width:auto;}
-      .nav .gnb .sub {display:none;}
+      .list{position:relative; display:block;
+        font-family: helvetica;
+        font-size: 40px;
+        padding:20px;}
+      .nav{}
+      .gnb{margin: 0px;}
+      .gnb li {margin: 0 auto;width:100px;}
+      .nav .gnb .sub{display: none;}
       .nav .gnb li:hover .sub {
-        padding: 20px;width:100px;
+        padding: 20px;
         display:block; font-size: 1px;
         margin: 5px;
-        background: #ff050050;
-        align: center;
-        position:sticky;
+                background: #ff050050;
+                position:relative;
+                width: 200px;
       }
-
 
 #follow{position:fixed;  float:left;
     left:15px; bottom:15px;
     }
 
-#background {position: inherit;
+#background {position:absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 0px;padding: 0px;
+  height: auto;
+  z-index:0;
+  top:0;left: 0;
 }
   #background img{
-    padding:0;
-    width: 99%;
-    z-index: 5;
-    }
+    width:100%;
+    float: left;
+  }
 
 
-@media screen and (max-width: 1070px){
+@media screen and (max-width: 1070px)
+  {
     #background {
       display: block;
     }
@@ -131,5 +142,42 @@
     .t2{width:50px; height:50px;
                 right:13px; bottom:50px;
                  }
-    .page2{width: 90%;}
+  }
+
+
+::-webkit-scrollbar {
+    width: 6px;  /* 세로축 스크롤바 길이 */
+    height: 5px;  /* 가로축 스크롤바 길이 */
+  }
+  ::-webkit-scrollbar-track {
+    background-color:#ffffff00;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color:#ffffff00;/*여백*/
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;/*스크롤바*/
+    background-color:#ababab;
+    box-shadow: 0px 3px 3px red;
+  }
+  ::-webkit-scrollbar-button {
+    background-color: darkblue;
+    width: 20px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-button:start {
+    background-color: red; /* Top, Left 방향의 이동버튼 */
+  }
+  ::-webkit-scrollbar-button:end {
+    background-color: orange; /* Bottom, Right 방향의 이동버튼 */
+  }
+  ::-webkit-scrollbar-button:vertical:increment {
+  }
+  ::-webkit-scrollbar-button:vertical:decrement {
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: none; /* 우측 하단의 코너 부분 */
+  }
+  ::-webkit-resizer {
+    background-color: green;
   }
