@@ -17,21 +17,21 @@
 .header{
   position:fixed;
   z-index: 3;
-  top: 10%;
+  top:0;
   width: 100%; height: 100px;
-}
-.header h1{
-   position:fixed;
-
+  }
+  .header h1{
+   top: 0; left: 0; right: 0; bottom: 0;
     }
   .logo1 img{
     width: 200px;
     position: fixed; display:none;}
-  .logo2{width:300px;height: 50px;
-    margin: 0 auto;}
+  .logo2{width:350px;height: 100px;
+    margin: 0 auto;
+    }
 
 .shadow{
-  box-shadow:4px 4px 6px #b2b2b2;
+  box-shadow:3px 4px 8px #00000070;
   }
   .tshadow{
     text-shadow: 1px 1px 2px #b2b2b2;
@@ -73,9 +73,9 @@
      position: fixed;
      top:200px;}
 .page2{
-        width:70%; height: 1000px;
-        background:#cbcbcb;
-        overflow: scroll;
+        width:70%; height: 700px;
+        background:#d2d2d2;
+        overflow:scroll;
         z-index: 2;
         margin: 0 auto;
         position:relative;
@@ -83,7 +83,11 @@
         }
 .page2 img{width: 100%; padding-top:50px;
         }
-
+#stback{width:100%; height:inherit;
+  float: left; top: 0; left: 0; right:0; bottom: 0;
+  position: fixed;
+  background-color: #00000090;
+  z-index:1;}
 #category {
       }
       .list{position:relative; display:block;
@@ -125,6 +129,7 @@
   {
     #background {
       display: block;
+      z-index:0;
     }
     .line{height: 30%;}
     .lineleft{
@@ -157,7 +162,7 @@
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 8px;/*스크롤바*/
-    background-color:#ababab;
+    background-color:black;
     box-shadow: 0px 3px 3px red;
   }
   ::-webkit-scrollbar-button {
